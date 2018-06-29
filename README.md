@@ -147,6 +147,16 @@ This project is build on [Amazon Lightsail](https://lightsail.aws.amazon.com/) L
    $ pip install -r catalogAWS/requirements.txt
    $ deactivate
    ```
+   
+   * Install Softwares to run Application.
+     * Install `pip`
+       ```
+       $ sudo apt install python-pip
+       ```
+     * Install other required software's
+					  ```
+					  pip install --upgrade Flask SQLAlchemy httplib2 oauth2client requests psycopg2 psycopg2-binary
+					  ```
  * **Configure wsgi / Apache**
    In `$ nano /var/www/catalog/catalogAWS.wsgi` Copy and Paste
    ```
@@ -184,12 +194,16 @@ This project is build on [Amazon Lightsail](https://lightsail.aws.amazon.com/) L
    ```
    $ sudo a2ensite catalogAWS
    $ sudo service apache2 restart
-
+	  ```
 Note: You might still see the default Apache page despite setting everything up correctly. To resolve it and see your Flask app running, run the following commands in order:
 ```
 $ sudo a2dissite 000-default.conf
 $ sudo service apache2 restart
 ``` 
+
+## Third Party Resourses
+   - [Deploy a Flask Application on an Ubuntu VPS](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
+   - [Running a Flask application under the Apache WSGI module](https://www.jakowicz.com/flask-apache-wsgi/)
 
 ## creators
 
