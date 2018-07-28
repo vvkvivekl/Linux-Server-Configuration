@@ -157,7 +157,7 @@ This project is build on [Amazon Lightsail](https://lightsail.aws.amazon.com/) L
 					  ```
 					  pip install --upgrade Flask SQLAlchemy httplib2 oauth2client requests psycopg2 psycopg2-binary
 					  ```
- * **Configure wsgi / Apache**
+# Configure wsgi / Apache
    In `$ nano /var/www/catalog/catalogAWS.wsgi` Copy and Paste
    ```
    #! /usr/bin/python
